@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+    {% for game in games %}
+        <a href="game/{{ game.id }}"><h3>{{ game.title }}</h3></a>
+    {% endfor %}
+{% endblock %}

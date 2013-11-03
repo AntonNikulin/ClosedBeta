@@ -1,0 +1,24 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Closedbeta{% endblock title %}</title>
+    <link type="text/css" rel="stylesheet" href="{% static "main.css" %}">
+</head>
+<body>
+    <h1 id="logo"><a href="/">Closedbeta</a></h1>
+    <nav>
+        <ul>
+            <li><a href="/admin/">admin</a></li>
+        </ul>
+    </nav>
+    {% if user.is_authenticated %}
+        <div id="user-info">{{ user.username }} | <a href="/logout/">logout</a></div>
+    {% else %}
+        <div id="user-info"><a href="/login/">login</a></div>
+    {% endif %}
+
+    {% block content %}{% endblock content %}
+    <p>test base html</p>
+</body>
+</html>

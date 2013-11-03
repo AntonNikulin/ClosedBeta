@@ -1,0 +1,1 @@
+[{"pk": 1, "model": "Games.userrating", "fields": {"rating": 5, "game": 1, "user": 1}}, {"pk": 1, "model": "Games.game", "fields": {"genre": [1], "rating": 1, "release_date": "2013-10-31", "rating_voters": 1, "title": "dune"}}, {"pk": 1, "model": "Games.genre", "fields": {"genre": "rts", "description": "st"}}]

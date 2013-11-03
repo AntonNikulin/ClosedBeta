@@ -1,0 +1,38 @@
+[
+    {"pk": 1,
+        "model": "Games.game",
+        "fields":
+        {
+            "genre": [2],
+            "release_date": "1992-01-01",
+            "title": "Dune 2"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "Games.game",
+        "fields":
+        {
+            "genre": [1, 3],
+            "release_date": "2005-09-16",
+            "title": "Fahrenheit"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "Games.genre",
+        "fields":
+        {
+            "genre": "action",
+            "description": "The action game is a video game genre that emphasizes physical challenges, including hand\u2013eye coordination and reaction-time."
+        }
+    },
+    {
+        "pk": 2,
+        "model": "Games.genre",
+        "fields":
+        {
+            "genre": "strategy",
+            "description": "is a genre that emphasizes skillful thinking and planning to achieve victory.They emphasize strategic, tactical, and sometimes logistical challenges. Many games also offer economic challenges and exploration. These games sometimes incorporate physical challenges, but such challenges can annoy strategically minded players."
+        }
+    }, {"pk": 3, "model": "Games.genre", "fields": {"genre": "interactive movie", "description": "is a game that features highly cinematic presentation and heavy use of scripting, often through the use of full-motion video of either animated or live-action footage."}}]
