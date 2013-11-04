@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
+
 class UserRating(models.Model):
     rating = models.PositiveIntegerField(max_length=2)
     user = models.ForeignKey(User)
@@ -10,6 +11,7 @@ class UserRating(models.Model):
 
     def __unicode__(self):
         return "%s" % self.rating
+
 
 class Game(models.Model):
     title = models.CharField(max_length=150, blank=False)
@@ -24,6 +26,7 @@ class Game(models.Model):
 
     def __unicode__(self):
         return self.title
+
 
 class Genre(models.Model):
     genre = models.CharField(max_length=50)
