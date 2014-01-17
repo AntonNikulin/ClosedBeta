@@ -10,8 +10,8 @@ class Article(models.Model):
     Date_modified = models.DateTimeField(auto_now=True)
     Points = models.IntegerField(default=1)
     Voters = models.ForeignKey(User)
-    Tags = models.ManyToManyField("Tag")
 
 
 class Tag(models.Model):
     Name = models.CharField(max_length=50)
+    Articles = models.ManyToManyField(Article)
