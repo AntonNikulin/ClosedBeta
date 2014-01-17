@@ -2,7 +2,7 @@
 *.db
 build
 dist
-
+ReadMe.txt
 
 *.py[cod]
 
