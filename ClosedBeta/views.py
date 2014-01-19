@@ -1,3 +1,4 @@
+from django.core.context_processors import csrf
 from django.contrib.auth.models import User
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
@@ -10,10 +11,11 @@ def registrationPage(request):
         if form.is_valid():
             user = User.objects.create_user(
                 username = form.cleaned_data['username'],
-                password = form.claned_data['password1'],
+                password = form.cleaned_data['password1'],
                 email = form.cleaned_data['email']
             )
             return HttpResponseRedirect('/')
+        return render( request, 'registration/register.html', {"form": form,} )
     else:
         form = RegistrationForm()
-        return render(request, 'registration/register.html')
+        return render( request, 'registration/register.html', {"form": form,} )

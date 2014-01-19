@@ -10,6 +10,7 @@
     <nav>
         <ul>
             <li><a href="/admin/">admin</a></li>
+            <li><a href="{% url "registration" %}">register</a></li>
         </ul>
     </nav>
     {% if user.is_authenticated %}
@@ -19,6 +20,5 @@
     {% endif %}
 
     {% block content %}{% endblock content %}
-    <p>test base html</p>
 </body>
 </html>
