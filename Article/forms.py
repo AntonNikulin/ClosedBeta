@@ -1,7 +1,7 @@
-from django.forms import ModelForm
+from django import forms
 from .models import Article
 
-class ArticleForm(ModelForm):
-    class Meta:
-        model = Article
-        include = ["Title","Body"]
+class ArticleAddForm(forms.Form):
+    title = forms.CharField(required=True)
+    body = forms.Textarea(required=True)
+    tags = forms.CharField()
