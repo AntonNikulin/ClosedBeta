@@ -5,8 +5,8 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-                        url(r"^login/$", "django.contrib.auth.views.login", {"template_name": "registration/login.html"}),
-                        url(r"^logout/$", "django.contrib.auth.views.logout", {"next_page": "/"}),
+                        url(r"^login/$", "django.contrib.auth.views.login",name="login", {"template_name": "registration/login.html"}),
+                        url(r"^logout/$", "django.contrib.auth.views.logout",name="logout", {"next_page": "/"}),
                         url(r"^register/$", "ClosedBeta.views.registrationPage", name="registration"),
                         url(r"^",include("Games.urls")),
     # Examples:
