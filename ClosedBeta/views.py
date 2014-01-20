@@ -1,4 +1,3 @@
-from django.core.context_processors import csrf
 from django.contrib.auth.models import User
 from django.shortcuts import render
 from django.http import HttpResponseRedirect

@@ -7,12 +7,7 @@
 </head>
 <body>
     <h1 id="logo"><a href="/">Closedbeta</a></h1>
-    <nav>
-        <ul>
-            <li><a href="/admin/">admin</a></li>
-            <li><a href="{% url "registration" %}">register</a></li>
-        </ul>
-    </nav>
+    {% include "nav.html" %}
     {% if user.is_authenticated %}
         <div id="user-info">{{ user.username }} | <a href="/logout/">logout</a></div>
     {% else %}
