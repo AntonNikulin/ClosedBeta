@@ -1,19 +1,13 @@
-{% load staticfiles %}
 <!DOCTYPE html>
 <html>
-<head>
+<head>{% load staticfiles %}
     <title>{% block title %}Closedbeta{% endblock title %}</title>
     <link type="text/css" rel="stylesheet" href="{% static "main.css" %}">
 </head>
 <body>
     <h1 id="logo"><a href="/">Closedbeta</a></h1>
     {% include "nav.html" %}
-    {% if user.is_authenticated %}
-        <div id="user-info">{{ user.username }} | <a href="/logout/">logout</a></div>
-    {% else %}
-        <div id="user-info"><a href="/login/">login</a></div>
-    {% endif %}
-
+    {% include "loginUserPanel.html" %}
     {% block content %}{% endblock content %}
 </body>
 </html>

@@ -13,3 +13,7 @@ nav ul{
     text-decoration: none;
     color: black;
 }
+
+div{
+    background-color: rgba(182, 238, 255, 0.60);
+}
