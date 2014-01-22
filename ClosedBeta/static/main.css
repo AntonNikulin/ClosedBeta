@@ -1,6 +1,5 @@
 p{
     color: green;
-    background-color: bisque;
 }
 
 nav ul{
@@ -16,4 +15,17 @@ nav ul{
 
 div{
     background-color: rgba(182, 238, 255, 0.60);
+}
+
+p.article{
+    margin: 2;
+    background-color: rgb(245, 202, 36);
+}
+
+ul.tags li{
+    font-style: italic;
+    list-style-type: none;
+    display: inline;
+    padding: 0px;
+    margin: 0px;
 }
