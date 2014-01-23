@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from .models import *
@@ -28,3 +28,8 @@ def articleAdd(request):
     else:
         form = ArticleAddForm()
         return render( request, "Article/articleAdd.html", {"form": form,} )
+
+
+def articleRead(request, articleID):
+    article = get_object_or_404(Article, pk=articleID)
+    return render( request, "Article/articleRead.html", {"article": article,} )
